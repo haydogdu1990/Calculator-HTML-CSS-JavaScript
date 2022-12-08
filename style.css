@@ -1,0 +1,249 @@
+*,*::before, ::after{
+    box-sizing: border-box;
+    
+    font-weight: normal;
+}
+
+body{
+
+    font-family: Gotham Rounded, sans-serif;
+  height:100vh;
+  width:100%;
+
+  z-index: -2;
+  
+  display:flex;
+  align-items: center;
+  justify-content: center;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #00aaff, #00ff6c);
+
+    background: linear-gradient(218deg, #13e3ad, #4084e3, #8440e3);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 11s ease infinite;
+    -moz-animation: AnimationName 11s ease infinite;
+    animation: AnimationName 11s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 97%}
+    50%{background-position:100% 4%}
+    100%{background-position:0% 97%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 97%}
+    50%{background-position:100% 4%}
+    100%{background-position:0% 97%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 97%}
+    50%{background-position:100% 4%}
+    100%{background-position:0% 97%}
+}
+
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content:center;
+    
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(110px, auto) repeat(5, 80px);
+    margin:0;
+    padding:0;
+    border-radius: 20px 20px 20px 20px;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  
+
+    
+    
+    
+  
+}
+
+
+
+.calculator-grid>button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255,255,255, .5);
+
+    
+    font-family: 'Bungee', cursive;
+    color: rgba(0, 0, 0, 0.8);
+    
+
+    
+}
+
+.calculator-grid>button:hover{
+    
+    background-color: rgba(255,255,255, .75);
+    
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.output{
+    grid-column: 1/-1;
+    background-color: rgba(0,0,0, .5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break:break-all;
+  
+ border-radius:20px 20px 0 0 ;
+
+ 
+ font-family: 'Graduate', cursive;
+ 
+  
+}
+
+.output .previous-operand{
+    color: rgba(245, 245, 245, 0.65);
+    font-size: 1.8rem;
+}
+
+.output .current-operand{
+    color: rgba(245, 245, 245, 0.85);
+    font-size: 2.8rem;
+}
+
+.explanation{
+    grid-column: 1/-1;
+      background-color: rgba(0,0,0, .5);
+    
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px;
+      word-wrap: break-word;
+      word-break:break-all;
+    
+   border-radius: 0 0 20px 20px;
+
+   font-family: 'Bree Serif', serif;
+   color:rgba(255,255,255, .75);
+  }
+  
+
+
+.circle1,
+.circle2 {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.2)
+  );
+  
+  position: absolute;
+  border-radius: 50%;
+  z-index: -2;
+}
+
+.circle1 {
+  top: 8%;
+  right: 55%;
+  height: 12rem;
+  width: 12rem;
+  animation: circle1 4s linear 0s 1 normal none;
+
+  
+
+  
+}
+
+
+
+
+.circle2 {
+  bottom: 5%;
+  left: 55%;
+  height: 15rem;
+  width: 15rem;
+  animation: circle1 4s linear 0s 1 normal none;
+}
+
+
+
+.footer i {
+    
+    font-size: 25px;
+    margin:5px;
+  }
+  .footer a {
+    color: #ddd;
+    font-size: 30px;
+    margin:5px;
+  }
+  
+  .footer a:hover {
+    color: #fff;
+    
+  }
+
+
+@keyframes circle1 {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 1;
+		transform: translateY(-45px);
+	}
+
+	24% {
+		opacity: 1;
+	}
+
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateY(-24px);
+	}
+
+	65% {
+		animation-timing-function: ease-in;
+		transform: translateY(-12px);
+	}
+
+	82% {
+		animation-timing-function: ease-in;
+		transform: translateY(-6px);
+	}
+
+	93% {
+		animation-timing-function: ease-in;
+		transform: translateY(-4px);
+	}
+
+	25%,
+	55%,
+	75%,
+	87% {
+		animation-timing-function: ease-out;
+		transform: translateY(0px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+
+
+
+  
+  
